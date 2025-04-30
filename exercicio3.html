@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+    <script>
+        function acionaAcesso() {
+            const usuario = document.getElementById("login").value.trim()
+            const senha = document.getElementById("senha").value.trim()
+
+
+            // Verificar se ambos os campos foram preenchidos
+            if (usuario !== "" && senha !== "") {
+                // Exibir a mensagem personalizada de boas-vindas
+                alert(`LOGIN REALIZADO COM SUCESSO. Bem-vindo, ${usuario}! Você pode utilizar o seu e-mail ${senha} para acessar seu inventário de itens favoritos.`);
+
+                document.getElementById("login").value = "";
+                document.getElementById("senha").value = "";
+            } else {
+                alert("Por favor, preencha todos os campos.");
+            }
+            document.getElementById("resultado").innerHTML = `Bem-vindo ${usuario}! Você pode utilizar o seu usuário ${usuario} e sua senha ${senha} para acessar seu inventário de itens favoritos.`
+
+        }
+
+    </script>
+
+
+
+
+</head>
+
+<body>
+    <h1>Login de Usuário</h1>
+    <hr>
+
+    <h2>
+        <label for="login">login:</label>
+        <input id="login" type="text" placeholder="Digite Aqui Seu Usuário" required>
+        <br>
+        <!-- Sim, eu ja sei qeu o label tme a função de atrelar o campo input a ele, tem como função se o usuário clica na escrita login ele automaticamente direciona para caixa de digitação -->
+        <label for="senha">Senha</label>
+        <input id="senha" type="password" placeholder="Digite Aqui Sua Senha" required>
+        <button id="acessando" onclick="acionaAcesso()">Acessar</button>
+        <hr>
+        <div id="resultado"></div>
+
+
+
+    </h2>
+
+</body>
+<!-- Honestamente não utilizei chat gpt para este código, utilizei o exercicio da ultima aula e adequei ele para a avaliação desta. -->
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+    <script>
+        function solicitaSaudacao() {
+            const agora = new Date(); // Cria um novo objeto Date com o momento atual
+            const horaAtual = agora.getHours(); // Pega a hora atual (0 a 23)
+            const cliente = document.getElementById("nomeUsuario").value
+            let saudacao;
+
+            if (horaAtual >= 6 && horaAtual <= 12) {
+                saudacao = "Bom Dia.";
+            } else if (horaAtual >= 13 && horaAtual <= 18) {
+                saudacao = "Boa Tarde.";
+            } else {
+                saudacao = "Boa Noite.";
+            }
+
+            document.getElementById("respostaSaudacao").textContent = saudacao + " Seja bem vindo " + cliente + ".";
+            document.getElementById("nomeUsuario").value = ""
+
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+    <h1>Saudação ao usuário</h1>
+    <hr>
+
+    <h2>
+        <input type="text" placeholder="Escreva seu Nome" id="nomeUsuario">
+        <button onclick="solicitaSaudacao()">Ativa Saudação</button>
+        <hr>
+        <div id="respostaSaudacao"></div>
+
+    </h2>
+</body>
+<!-- estamos mudando de tarefa, agora eu preciso utilizar o elemento date no javascript para que quando eu clique um botão ele valide o horário atual para decidir através de if se a saudação personalizada se dará Bom dia das 06h00 até 11h59, Boa Tarde das 12h00 até 18h00 e Boa Noite 00h00 até 05h59 e 18h01 até 23h59 -->
+<!-- Preciso fazer meu script entender que o input é para string é o nome de alguem o qual estou atribuindo a uma variavel que gostaria de utilizar como string em uma exibição de uma div. const cliente = document.getElementById("nomeUsuario").innerHTML -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+
+</html>

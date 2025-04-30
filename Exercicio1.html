@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+    <script>
+
+        function adicionaNumero() {
+            let resultado = parseFloat(document.getElementById("apresentacaoClique").innerHTML) || 0;
+            let soma = 1
+            let resultadoFinal = (resultado + soma).toString()
+            document.getElementById("apresentacaoClique").innerHTML = resultadoFinal;
+            alert("Adicionado um à contagem");
+        }
+
+        function resetaContagem() {
+            document.getElementById("apresentacaoClique").innerHTML = "0";
+            alert("Contagem Reiniciada");
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+    <h1>Contador de cliques.</h1>
+    <hr>
+    <div id="apresentacaoClique" style="background-color: blue; padding: 40px; text-align: center; font-size: 300px;">
+    </div>
+    <hr>
+    <h2><button id="adicionaClique" onclick="adicionaNumero()">Inicie a Contagem</button>
+        <button id="resetaContagem" onclick="resetaContagem()">Reseta a Contagem</button>
+    </h2>
+
+</body>
+<!-- Boa noite estou realizando a tarefa de criar um contador, estou com duvida na minha função de adicionar a contagem na minha DIV, eu preciso criar uma variavel que entenda ser numero para adicionar  a soma e exiba a contagem -->
+<!--  function adicionaNumero() {
+            const soma = "1"
+            const adicao = parseFloar(getElementById("apresetancaoClique").value)
+            const resultado = (adicao + soma)
+            document.getElementById("apresentacaoClique").innerHTML = resultado
+            alert("Adicionado um a contagem")
+
+        }
+esta minha função até agora -->
+<!-- acredito que esta entendendo a const soma = 1; como uma variavel e não um valor -->
+<!-- function adicionaNumero() {
+            const soma = 1;
+            const adicao = parseFloat(document.getElementById("apresetancaoClique").value);
+            const resultado = (adicao + soma); // Soma os valores
+            document.getElementById("apresetancaoClique").textContent = resultado;
+            alert("Adicionado um à contagem");
+        }
+
+Ele não esta exibindo na minha div a adição do valor na contagem -->
+<!-- eu preciso transformar minha variavel resultado em numero para que ele some com a variavel soma. function adicionaNumero() {
+            let resultado = parseFloat(Document.getElementById("apresentacaoClique".innerHTML))
+            let soma = 1
+            document.getElementById("apresentacaoClique").innerHTML = resultado + soma
+            alert("Adicionado um à contagem");
+        } -->
+<!-- perfeito, agora ele me apresentou um erro de Not A Number, mas eu preciso apresentar o resultado me forma de string -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+
+</html>
