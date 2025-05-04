@@ -7,19 +7,21 @@
     <title>Exercicio 3</title>
     <script>
         function acionaAcesso() {
+            const login = "wellington"
+            const senhaBD = "wellingtonsperansa"
             const usuario = document.getElementById("login").value.trim()
             const senha = document.getElementById("senha").value.trim()
 
 
             // Verificar se ambos os campos foram preenchidos
-            if (usuario !== "" && senha !== "") {
+            if (usuario === login && senha === senhaBD) {
                 // Exibir a mensagem personalizada de boas-vindas
                 alert(`LOGIN REALIZADO COM SUCESSO. Bem-vindo, ${usuario}! Você pode utilizar o seu e-mail ${senha} para acessar seu inventário de itens favoritos.`);
 
                 document.getElementById("login").value = "";
                 document.getElementById("senha").value = "";
             } else {
-                alert("Por favor, preencha todos os campos.");
+                alert("Usuário ou senha incorretos");
             }
             document.getElementById("resultado").innerHTML = `LOGIN REALIZADO COM SUCESSO. Bem-vindo ${usuario}! Você pode utilizar o seu usuário ${usuario} e sua senha ${senha} para acessar seu inventário de itens favoritos.`
 
